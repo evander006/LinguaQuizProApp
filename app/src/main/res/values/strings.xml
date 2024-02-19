@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LanguageTestApp</string>
+    <string name="your_email">Email</string>
+    <string name="password">Пароль</string>
+    <string name="enter"><u>Войти</u></string>
+    <string name="signup"><u>Зарегистрироваться</u></string>
+    <string name="elementaryenglishbutton">ElementaryEnglishButton</string>
+    <string name="beginnerenglishbutton">BeginnerEnglishButton</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

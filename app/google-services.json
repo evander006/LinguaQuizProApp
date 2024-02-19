@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "38732590672",
+    "firebase_url": "https://languagetestapp-112b9-default-rtdb.firebaseio.com",
+    "project_id": "languagetestapp-112b9",
+    "storage_bucket": "languagetestapp-112b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:38732590672:android:29795825e843363e312b55",
+        "android_client_info": {
+          "package_name": "com.example.languagetestapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzKwnCEnYQgY8qffIL2F8DPeA3OqFAquI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
