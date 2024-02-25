@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.languagetestapp.fragments.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_signupFragment"
             app:destination="@id/signupFragment" />
@@ -21,7 +21,7 @@
         android:id="@+id/signinFragment"
         android:name="com.example.languagetestapp.fragments.SigninFragment"
         android:label="fragment_signin"
-        tools:layout="@layout/fragment_signin" >
+        tools:layout="@layout/fragment_signin">
         <action
             android:id="@+id/action_signinFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
@@ -33,7 +33,7 @@
         android:id="@+id/signupFragment"
         android:name="com.example.languagetestapp.fragments.SignupFragment"
         android:label="fragment_signup"
-        tools:layout="@layout/fragment_signup" >
+        tools:layout="@layout/fragment_signup">
         <action
             android:id="@+id/action_signupFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
@@ -45,25 +45,10 @@
         android:id="@+id/homeFragment"
         android:name="com.example.languagetestapp.fragments.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_englishElemFragment"
-            app:destination="@id/englishElemFragment" />
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_accountFragment"
             app:destination="@id/accountFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_englishBeginnerFragment"
-            app:destination="@id/englishBeginnerFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_germanFisrtFragment"
-            app:destination="@id/germanFisrtFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_germanASecFragment"
-            app:destination="@id/germanASecFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_russianEFragment"
-            app:destination="@id/russianEFragment" />
         <action
             android:id="@+id/action_homeFragment_to_quizFragment"
             app:destination="@id/quizFragment" />
@@ -72,59 +57,18 @@
         android:id="@+id/accountFragment"
         android:name="com.example.languagetestapp.fragments.AccountFragment"
         android:label="fragment_account"
-        tools:layout="@layout/fragment_account" >
+        tools:layout="@layout/fragment_account">
         <action
             android:id="@+id/action_accountFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/englishElemFragment"
-        android:name="com.example.languagetestapp.fragments.EnglishElemFragment"
-        android:label="fragment_english_elem"
-        tools:layout="@layout/fragment_english_elem" >
-        <action
-            android:id="@+id/action_englishElemFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/englishBeginnerFragment"
-        android:name="com.example.languagetestapp.fragments.EnglishBeginnerFragment"
-        android:label="fragment_english_beginner"
-        tools:layout="@layout/fragment_english_beginner" >
-        <action
-            android:id="@+id/action_englishBeginnerFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/germanFisrtFragment"
-        android:name="com.example.languagetestapp.fragments.GermanFisrtFragment"
-        android:label="fragment_german_fisrt"
-        tools:layout="@layout/fragment_german_fisrt" >
-        <action
-            android:id="@+id/action_germanFisrtFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/germanASecFragment"
-        android:name="com.example.languagetestapp.fragments.GermanASecFragment"
-        android:label="fragment_german_a_sec"
-        tools:layout="@layout/fragment_german_a_sec" >
-        <action
-            android:id="@+id/action_germanASecFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/russianEFragment"
-        android:name="com.example.languagetestapp.fragments.RussianEFragment"
-        android:label="fragment_russian_e"
-        tools:layout="@layout/fragment_russian_e" >
-        <action
-            android:id="@+id/action_russianEFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/quizFragment"
         android:name="com.example.languagetestapp.fragments.QuizFragment"
         android:label="fragment_quiz"
-        tools:layout="@layout/fragment_quiz" />
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quizFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
