@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:gravity="center"
+    android:padding="16dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/unboundedmedium"
+        android:textSize="20sp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:id="@+id/scoreTitle"
+        android:text="Поздравляю!\nВы прошли тест"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:trackColor="@color/white"
+            app:indicatorColor="@color/orange"
+            android:progress="60"
+            app:trackCornerRadius="20dp"
+            app:trackThickness="8dp"
+            app:indicatorSize="90dp"/>
+
+        <TextView
+            android:id="@+id/progressPercentageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/unboundedregular"
+            android:text="50%"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/questionsPassSubt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="5 из 30 вопросов правильные"
+        android:textColor="@color/white"
+        android:fontFamily="@font/unboundedlight"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Завершить"
+        android:layout_margin="8dp"
+        android:id="@+id/finishBtn"
+        android:fontFamily="@font/unboundedregular"
+        android:backgroundTint="@color/orange"/>
+</LinearLayout>
