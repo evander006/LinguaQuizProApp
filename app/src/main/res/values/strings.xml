@@ -6,7 +6,6 @@
     <string name="signup"><u>Зарегистрироваться</u></string>
     <string name="elementaryenglishbutton">ElementaryEnglishButton</string>
     <string name="beginnerenglishbutton">BeginnerEnglishButton</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="default_web_client_id">38732590672-n2qkg2drmf07fk070untgns3fboueald.apps.googleusercontent.com</string>
 </resources>

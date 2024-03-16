@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/splashFragment"
@@ -52,6 +52,9 @@
         <action
             android:id="@+id/action_homeFragment_to_quizFragment"
             app:destination="@id/quizFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_englishTestsFragment"
+            app:destination="@id/englishTestsFragment" />
     </fragment>
     <fragment
         android:id="@+id/accountFragment"
@@ -70,5 +73,17 @@
         <action
             android:id="@+id/action_quizFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/englishTestsFragment"
+        android:name="com.example.languagetestapp.fragments.EnglishTestsFragment"
+        android:label="fragment_english_tests"
+        tools:layout="@layout/fragment_english_tests" >
+        <action
+            android:id="@+id/action_englishTestsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_englishTestsFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
     </fragment>
 </navigation>

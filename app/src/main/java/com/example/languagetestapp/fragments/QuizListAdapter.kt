@@ -23,7 +23,7 @@ class QuizListAdapter(
                 root.setOnClickListener {
                     QuizFragment.questionModelList = model.questionList
                     QuizFragment.timer=model.time
-                    it.findNavController().navigate(R.id.action_homeFragment_to_quizFragment)
+                    it.findNavController().navigate(R.id.action_englishTestsFragment_to_quizFragment)
                 }
             }
         }

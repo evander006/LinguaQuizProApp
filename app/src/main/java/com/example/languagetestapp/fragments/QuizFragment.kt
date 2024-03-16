@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
@@ -92,6 +93,10 @@ class QuizFragment : Fragment(),View.OnClickListener {
         }
         val clicked = v as Button
         if(clicked.id==R.id.nextbtn){
+//            if (selectedAnswer.isEmpty()){
+//                Toast.makeText(context, "Выберите один вариант ответа", Toast.LENGTH_LONG).show()
+//                return;
+//            }
             if (selectedAnswer==questionModelList[currQuestionIndex].correct){
                 score++
                 Log.i("Score of quiz", score.toString())

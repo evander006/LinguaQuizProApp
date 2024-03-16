@@ -9,19 +9,20 @@ import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.languagetestapp.R
-import com.example.languagetestapp.databinding.FragmentSignupBinding
+import com.example.languagetestapp.databinding.FragmentSigninBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class SigninFragment : Fragment() {
     private lateinit var auth:FirebaseAuth
-    private lateinit var binding: FragmentSignupBinding
+    private lateinit var binding: FragmentSigninBinding
     private lateinit var navControl: NavController
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding=FragmentSignupBinding.inflate(inflater, container, false)
+        binding=FragmentSigninBinding.inflate(inflater, container, false)
+        
         return binding.root
     }
 
@@ -37,7 +38,7 @@ class SigninFragment : Fragment() {
     }
 
     private fun regUser(){
-        binding.signin.setOnClickListener {
+        binding.signup.setOnClickListener {
             navControl.navigate(R.id.action_signinFragment_to_signupFragment)
         }
 

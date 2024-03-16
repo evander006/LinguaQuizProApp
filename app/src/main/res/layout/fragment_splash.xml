@@ -21,12 +21,13 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="152dp"
         android:fontFamily="@font/unboundedregular"
-        android:text="Проверь свой уровень с"
+        android:text="Проверь уровень знаний с"
         android:textColor="@color/black"
         android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +37,6 @@
         android:fontFamily="@font/unboundedsemibold"
         android:text="LinguaQuiz Pro"
         android:textSize="35sp"
-        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />

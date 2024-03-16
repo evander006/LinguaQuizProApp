@@ -21,7 +21,6 @@ class SplashFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_splash, container, false)
     }
 
@@ -29,7 +28,7 @@ class SplashFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         auth=FirebaseAuth.getInstance()
         navControl=Navigation.findNavController(view)
-        Handler(Looper.myLooper()!!).postDelayed(Runnable {
+        Handler(Looper.myLooper()!!).postDelayed({
             if (auth.currentUser != null){
                 navControl.navigate(R.id.action_splashFragment_to_homeFragment)
             }else{
