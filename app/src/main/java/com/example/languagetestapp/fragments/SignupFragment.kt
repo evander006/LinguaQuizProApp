@@ -46,7 +46,33 @@ class SignupFragment : Fragment() {
         navControl=Navigation.findNavController(view)
         auth=FirebaseAuth.getInstance()
     }
+    private fun regUser(){
+        binding.signin.setOnClickListener {
+            navControl.navigate(R.id.action_signupFragment_to_signinFragment)
+        }
 
+        binding.next.setOnClickListener {
+            val email=binding.emailInput.text.toString().trim()
+            val pass=binding.passw.text.toString().trim()
+            val reppass=binding.reppassw.text.toString().trim()
+            if (email.isNotEmpty()&&pass.isNotEmpty()&&reppass.isNotEmpty()){
+                if(pass==reppass){
+                    auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener({
+                        if (it.isSuccessful){
+                            Toast.makeText(context, "Зарегистрирован успешно",Toast.LENGTH_LONG).show()
+                            navControl.navigate(R.id.action_signupFragment_to_homeFragment)
+                        }else{
+                            Toast.makeText(context, it.exception?.message,Toast.LENGTH_LONG).show()
+                        }
+
+                    })
+                }else{
+                    Toast.makeText(context, "Пароли не совпадают",Toast.LENGTH_LONG).show()
+                }
+            }
+
+        }
+    }
     private fun signIn(){
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -85,31 +111,5 @@ class SignupFragment : Fragment() {
             }
     }
 
-    private fun regUser(){
-        binding.signin.setOnClickListener {
-            navControl.navigate(R.id.action_signupFragment_to_signinFragment)
-        }
 
-        binding.next.setOnClickListener {
-            val email=binding.emailInput.text.toString().trim()
-            val pass=binding.passw.text.toString().trim()
-            val reppass=binding.reppassw.text.toString().trim()
-            if (email.isNotEmpty()&&pass.isNotEmpty()&&reppass.isNotEmpty()){
-                if(pass==reppass){
-                    auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener({
-                        if (it.isSuccessful){
-                            Toast.makeText(context, "Зарегистрирован успешно",Toast.LENGTH_LONG).show()
-                            navControl.navigate(R.id.action_signupFragment_to_homeFragment)
-                        }else{
-                            Toast.makeText(context, it.exception?.message,Toast.LENGTH_LONG).show()
-                        }
-
-                    })
-                }else{
-                    Toast.makeText(context, "Пароли не совпадают",Toast.LENGTH_LONG).show()
-                }
-            }
-
-        }
-    }
 }

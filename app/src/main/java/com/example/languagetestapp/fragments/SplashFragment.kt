@@ -29,10 +29,10 @@ class SplashFragment : Fragment() {
         auth=FirebaseAuth.getInstance()
         navControl=Navigation.findNavController(view)
         Handler(Looper.myLooper()!!).postDelayed({
-            if (auth.currentUser != null){
-                navControl.navigate(R.id.action_splashFragment_to_homeFragment)
-            }else{
+            if (auth.currentUser == null){
                 navControl.navigate(R.id.action_splashFragment_to_signupFragment)
+            }else{
+                navControl.navigate(R.id.action_splashFragment_to_homeFragment)
             }
         }, 3000)
     }
